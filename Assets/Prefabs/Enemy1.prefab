@@ -11,12 +11,18 @@ GameObject:
   - component: {fileID: 8341014560883859784}
   - component: {fileID: 2530613060515050497}
   - component: {fileID: 5560216210372865635}
+<<<<<<< HEAD
   - component: {fileID: 6092049806677280205}
   - component: {fileID: -2524089164259705493}
   - component: {fileID: 7909856113705524880}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
+=======
+  m_Layer: 0
+  m_Name: Enemy1
+  m_TagString: Untagged
+>>>>>>> 45e610f (chek)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +35,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724484385472788238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: -5}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+>>>>>>> 45e610f (chek)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,7 +86,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 0
+>>>>>>> 45e610f (chek)
   m_Sprite: {fileID: 21300000, guid: 52d8dae12cbccc74ab13551114e73ae6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,6 +122,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+<<<<<<< HEAD
 --- !u!50 &6092049806677280205
 Rigidbody2D:
   serializedVersion: 4
@@ -184,3 +199,5 @@ MonoBehaviour:
   - {fileID: 5228577159392482587, guid: 40cbc3b880877e040aa32bf4927ed08d, type: 3}
   - {fileID: 8095782019922176986, guid: 80a7135d388593044ab6aa0efcb5f6cf, type: 3}
   navigation: 0.01
+=======
+>>>>>>> 45e610f (chek)

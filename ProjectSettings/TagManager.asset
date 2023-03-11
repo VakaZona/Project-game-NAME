@@ -3,9 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - MoviengPoint
   - Enemy
+=======
+  tags: []
+>>>>>>> 45e610f (chek)
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,11 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - CollisionObject
+=======
+  - 
+>>>>>>> 45e610f (chek)
   - 
   - 
   - 
