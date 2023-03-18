@@ -183,4 +183,4 @@ MonoBehaviour:
   - {fileID: 7214750858874499002, guid: 7ded1dcc47075954384bf882de21581d, type: 3}
   - {fileID: 5228577159392482587, guid: 40cbc3b880877e040aa32bf4927ed08d, type: 3}
   - {fileID: 8095782019922176986, guid: 80a7135d388593044ab6aa0efcb5f6cf, type: 3}
-  navigation: 1
+  navigation: 0.01
