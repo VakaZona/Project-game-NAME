@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2530613060515050497}
   - component: {fileID: 5560216210372865635}
   - component: {fileID: 6092049806677280205}
-  - component: {fileID: -7903707746929716923}
   - component: {fileID: -2524089164259705493}
+  - component: {fileID: 7909856113705524880}
   m_Layer: 8
   m_Name: Enemy1
   m_TagString: Enemy
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724484385472788238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -129,18 +129,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-7903707746929716923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6724484385472788238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01c5803bb87e3043bd50a96deadfe34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &-2524089164259705493
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,3 +155,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2777086, y: 0.36}
   m_EdgeRadius: 0
+--- !u!114 &7909856113705524880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724484385472788238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01c5803bb87e3043bd50a96deadfe34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: 0
+  exit: {fileID: 1833470231367664072, guid: 92afa00dc2cc18a4d93cea4d25bc4ed9, type: 3}
+  wayPoints:
+  - {fileID: 8041786526055973991, guid: 91d977034914096438691bf400171c75, type: 3}
+  - {fileID: 8744562448013267932, guid: 19e2b917188afa648a393fe7be59da1f, type: 3}
+  - {fileID: 8057842474959471617, guid: 00439b1a613860f49a84051b71a825b3, type: 3}
+  - {fileID: 1429377672863846448, guid: 638e3ec95f4d9ed47aeb0e73267bab2c, type: 3}
+  - {fileID: 3152561569914392774, guid: 33ba334d9ac7724438cd125772e8c4bf, type: 3}
+  - {fileID: 5305751761651858307, guid: c0a5c7ede331ad4418f07113925f6724, type: 3}
+  - {fileID: 7164804781914201681, guid: 918c48cc657fa43428fd00bae7888123, type: 3}
+  - {fileID: 2241421325396786238, guid: 61e6d37a2bd901449ae3117920a3518a, type: 3}
+  - {fileID: 153737508838297600, guid: 77e0425368146a24fb346c604152ad17, type: 3}
+  - {fileID: 8910424485463841686, guid: 524858eeea6c69d4f8f46a7c8fbc6792, type: 3}
+  - {fileID: 7214750858874499002, guid: 7ded1dcc47075954384bf882de21581d, type: 3}
+  - {fileID: 5228577159392482587, guid: 40cbc3b880877e040aa32bf4927ed08d, type: 3}
+  - {fileID: 8095782019922176986, guid: 80a7135d388593044ab6aa0efcb5f6cf, type: 3}
+  navigation: 1

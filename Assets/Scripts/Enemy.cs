@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         if(wayPoints!=null) {
             navigationTime += Time.deltaTime;
             if(navigationTime> navigation) {
-                if (target<wayPoints.length) {
+                if (target<wayPoints.Length) {
                     enemy.position=Vector2.MoveTowards(enemy.position, wayPoints[target].position, navigationTime);
                 } else {
                     enemy.position=Vector2.MoveTowards(enemy.position, exit.position, navigationTime);

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 7892968206157537165, guid: cb47ffdfa823d9d4b8ff0d5c0ef321ce, type: 3}
   enemies:
-  - {fileID: 7040201289675218619, guid: cb60aa6d77e8fcd45b4446f53bc7cae3, type: 3}
   - {fileID: 6724484385472788238, guid: 9fcdacc817345e746ae8c0661660b13b, type: 3}
-  maxEnemiesOnScreen: 10
-  totalEnemies: 10
+  - {fileID: 7040201289675218619, guid: cb60aa6d77e8fcd45b4446f53bc7cae3, type: 3}
+  maxEnemiesOnScreen: 1
+  totalEnemies: 1
   enemiesPerSpawn: 1
