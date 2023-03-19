@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Loader : MonoBehaviour
+public class Loader <T>: MonoBehaviour where T: MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject manager;
+    private static T instance;
 
-    private void Awake() {
-        if(Manager.instance==null) {
-            Instantiate(manager);
+    public static T Instance {
+        get {
+             if (instance==null) {
+                instance = FindObjectOfType<T>();
+            } else if (instance!=FindObjectOfType<T>()) {
+                Destroy(FindObjectOfType<T>());
+            }
+            DontDestroyOnLoad(FindObjectOfType<T>());
+            return instance;
         }
-        
     }
 }

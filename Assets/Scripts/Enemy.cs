@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
         if(collision.tag=="MoviengPoint") {
             target+=1;
         } else if (collision.tag=="Finish") {
-            Manager.instance.removeEnemyFromScreen();
+            Manager.Instance.removeEnemyFromScreen();
             Destroy(gameObject);
         }
     }

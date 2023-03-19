@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager : MonoBehaviour
-{
-    public static Manager instance = null;
+public class Manager : Loader<Manager> {
+    
 
     public GameObject spawnPoint;
     public GameObject[] enemies;
@@ -16,15 +15,6 @@ public class Manager : MonoBehaviour
 
     int enemiesOnScreen = 0;
 
-
-    void Awake() {
-        if (instance==null) {
-            instance=this;
-        } else if (instance!=this) {
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
 
     IEnumerator Spawn() {
         if(enemiesPerSpawn> 0 && enemiesOnScreen< totalEnemies) {
