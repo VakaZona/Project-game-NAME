@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a01c5803bb87e3043bd50a96deadfe34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 0
   exit: {fileID: 1833470231367664072, guid: 92afa00dc2cc18a4d93cea4d25bc4ed9, type: 3}
   wayPoints:
   - {fileID: 8041786526055973991, guid: 91d977034914096438691bf400171c75, type: 3}
@@ -184,3 +183,4 @@ MonoBehaviour:
   - {fileID: 5228577159392482587, guid: 40cbc3b880877e040aa32bf4927ed08d, type: 3}
   - {fileID: 8095782019922176986, guid: 80a7135d388593044ab6aa0efcb5f6cf, type: 3}
   navigation: 0.01
+  health: 100

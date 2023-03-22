@@ -26,7 +26,7 @@ public class Manager : Loader<Manager> {
         if(enemiesPerSpawn> 0 && EnemyList.Count< totalEnemies) {
             for (int i = 0; i < enemiesPerSpawn; i++) {
                 if(EnemyList.Count < maxEnemiesOnScreen) {
-                    GameObject newEnemy=Instantiate(enemies[1]) as GameObject;
+                    GameObject newEnemy=Instantiate(enemies[0]) as GameObject;
                     newEnemy.transform.position = spawnPoint.transform.position;
 
                 }

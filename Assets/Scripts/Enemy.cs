@@ -12,22 +12,36 @@ public class Enemy : MonoBehaviour
     Transform[] wayPoints;
     [SerializeField]
     float navigation;
+    [SerializeField]
+    int health;
 
+
+    Collider2D enemyCollider;
+    bool isDead=false;
     int target = 0;
     Transform enemy;
     float navigationTime=0;
+    Animator anim;
+
+    public bool IsDead {
+        get {
+            return isDead;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         enemy = GetComponent<Transform>();
+        enemyCollider = GetComponent<Collider2D>();
         Manager.Instance.RegisterEnemy(this);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(wayPoints!=null) {
+        if(wayPoints!=null && isDead==false) {
             navigationTime += Time.deltaTime;
             if(navigationTime> navigation) {
                 if (target<wayPoints.Length) {
@@ -47,6 +61,26 @@ public class Enemy : MonoBehaviour
         } else if (collision.tag=="Finish") {
             Manager.Instance.UnregisterEnemy(this);
           
+        } else if (collision.tag == "Projectile") {
+            Projectile newP=collision.gameObject.GetComponent<Projectile>();
+            EnemyHit(newP.AttackDamage);
+            Destroy(collision.gameObject);
         }
+    }
+    public void EnemyHit(int hitPoints) {
+        if(health - hitPoints > 0) {
+            health-=hitPoints;
+            anim.Play("Hunt");
+        } else {
+            //die
+            anim.SetTrigger("didDie");
+            Die();
+        }
+        
+    }
+
+    public void Die(){
+        isDead=true;
+        enemyCollider.enabled=false;
     }
 }
