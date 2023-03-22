@@ -6,6 +6,10 @@ TagManager:
   tags:
   - MoviengPoint
   - Enemy
+  - TowerSide
+  - Ground
+  - Tower
+  - TowerSideFull
   layers:
   - Default
   - TransparentFX

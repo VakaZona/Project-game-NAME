@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8725699539695323712}
   - component: {fileID: 749760205755359660}
+  - component: {fileID: -2716936678651875889}
   m_Layer: 0
   m_Name: miniGunTower
   m_TagString: Tower
@@ -84,3 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2716936678651875889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042339368852644979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7062ead6158d57f42be5db3f3e4020af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0.01
+  attackRadius: 3
+  projectile: {fileID: 4819025212441855022, guid: a57fc11b831dc0740bac05ec998ac15b, type: 3}
