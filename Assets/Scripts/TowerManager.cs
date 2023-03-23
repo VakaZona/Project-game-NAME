@@ -23,9 +23,9 @@ public class TowerManager : Loader<TowerManager>
             RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);
 
             if(hit.collider.tag == "TowerSide"){
-                    hit.collider.tag ="TowerSideFull";
+                    hit.collider.tag = "TowerSideFull";
+                    Debug.Log("hit: "+ hit.collider.tag);
                     PlaceTower(hit);
-                    
             }
            
             

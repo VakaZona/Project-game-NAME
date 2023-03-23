@@ -2,7 +2,7 @@
 using UnityEngine;
 
 public enum projectileType {
-    miniBullet, bigBullet
+    miniBullet, bigBullet, laser
 };
 
 public class Projectile : MonoBehaviour
