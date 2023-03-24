@@ -59,7 +59,11 @@ public class TowerControl : MonoBehaviour
     public void FixedUpdate() {
         if(isAttacking == true) {
             Attack();
-        }
+         } 
+         //else if(projectile!=null) {
+        //     Destroy(projectile);
+        // }
+
     }
 
     public void Attack() {
@@ -89,8 +93,10 @@ public class TowerControl : MonoBehaviour
             yield return null;
         }
         if(projectile != null || targetEnemy == null) {
+            Destroy(projectile.gameObject);
             Destroy(projectile);
         }
+        
     }
 
     private float GetTargetDistance(Enemy thisEnemy) {
@@ -123,7 +129,7 @@ public class TowerControl : MonoBehaviour
 
         foreach(Enemy enemy in GetEnemiesInRange()) 
         {
-            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <=smallesDistance) 
+            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <= smallesDistance) 
             {
                 smallesDistance=Vector2.Distance(transform.localPosition, enemy.transform.localPosition);
                 nearestEnemy = enemy;

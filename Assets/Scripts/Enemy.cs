@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     float navigation;
     [SerializeField]
     int health;
+    [SerializeField]
+    int rewardAmount;
 
 
     Collider2D enemyCollider;
@@ -59,12 +61,18 @@ public class Enemy : MonoBehaviour
         if(collision.tag=="MoviengPoint") {
             target+=1;
         } else if (collision.tag=="Finish") {
+            Manager.Instance.RoundEscaped+=1;
+            Manager.Instance.TotalEscaped+=1;
             Manager.Instance.UnregisterEnemy(this);
-          
+            Manager.Instance.IsWaveOver();
         } else if (collision.tag == "Projectile") {
             Projectile newP=collision.gameObject.GetComponent<Projectile>();
-            EnemyHit(newP.AttackDamage);
+            if(newP!=null){
+                EnemyHit(newP.AttackDamage);
+                
+            }
             Destroy(collision.gameObject);
+            
         }
     }
     public void EnemyHit(int hitPoints) {
@@ -80,7 +88,11 @@ public class Enemy : MonoBehaviour
     }
 
     public void Die(){
+
         isDead=true;
         enemyCollider.enabled=false;
+        Manager.Instance.TotalKilled+=1;
+        Manager.Instance.addMoney(rewardAmount);
+        Manager.Instance.IsWaveOver();
     }
 }

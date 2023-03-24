@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TowerManager : Loader<TowerManager>
 {
-    TowerBtn towerBtnPressed;
+    public TowerBtn towerBtnPressed;
     SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
@@ -18,13 +18,13 @@ public class TowerManager : Loader<TowerManager>
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0) && towerBtnPressed!=null) {
             Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);
 
             if(hit.collider.tag == "TowerSide"){
                     hit.collider.tag = "TowerSideFull";
-                    Debug.Log("hit: "+ hit.collider.tag);
+                    
                     PlaceTower(hit);
             }
            

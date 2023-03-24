@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerObject: {fileID: 2042339368852644979, guid: cf602c0c4cf278e4f88e3d44c0591688, type: 3}
   dragSprite: {fileID: 21300000, guid: 19bd25bc48c8d534b99913e3b03035ad, type: 3}
+  towerPrice: 40
 --- !u!1 &8290068794531307257
 GameObject:
   m_ObjectHideFlags: 0
