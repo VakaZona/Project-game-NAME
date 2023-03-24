@@ -92,9 +92,8 @@ public class TowerControl : MonoBehaviour
             projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 5f*Time.deltaTime);
             yield return null;
         }
-        if(projectile != null || targetEnemy == null) {
+        if(projectile != null ) {
             Destroy(projectile.gameObject);
-            Destroy(projectile);
         }
         
     }

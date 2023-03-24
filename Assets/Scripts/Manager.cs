@@ -159,7 +159,7 @@ public class Manager : Loader<Manager> {
     }
 
     public void SetCurrentGameState() {
-        if(totalEscaped >=10) {
+        if(TotalEscaped >=10) {
             currentStatus = gameStatus.gameover;
             Debug.Log("gameover");
         } else if(waveNumber==0 && (RoundEscaped+TotalKilled)==0) {
@@ -181,13 +181,20 @@ public class Manager : Loader<Manager> {
                 waveNumber+=1;
                 totalEnemies+=(waveNumber);
                 break;
-            default:
-                totalEnemies =5;
+            case gameStatus.play:
+                totalEnemies = 5;
                 TotalEscaped = 0;
                 TotalMoney = 30;
                 totalMoneyLabel.text = TotalMoney.ToString();
                 totalEscapedLabel.text = "Пропущено " + TotalEscaped + "/10";
                 break;
+            // default:
+            //     totalEnemies = 5;
+            //     TotalEscaped = 0;
+            //     TotalMoney = 30;
+            //     totalMoneyLabel.text = TotalMoney.ToString();
+            //     totalEscapedLabel.text = "Пропущено " + TotalEscaped + "/10";
+            //     break;
         }
         DestroyEnemies();
         TotalKilled = 0;
