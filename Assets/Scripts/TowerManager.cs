@@ -75,17 +75,14 @@ public class TowerManager : Loader<TowerManager>
         if(!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed!=null){
             // GameObject newTower=Instantiate(towerBtnPressed.TowerObject);
              TowerControl newTower=Instantiate(towerBtnPressed.TowerObject);
-            if(towerBtnPressed.TowerPrice <= Manager.Instance.TotalMoney){
+            
                
                 newTower.transform.position = hit.transform.position;
                 BuyTower(towerBtnPressed.TowerPrice);
                 RegisterTower(newTower);
                 DisableDrag();
-                Debug.Log("Tower: "+ towerBtnPressed);
-            } else {
-                towerBtnPressed=null;
-                DisableDrag();
-            }
+                
+            
             
             // RegisterTower(newTower);
             // DisableDrag();
