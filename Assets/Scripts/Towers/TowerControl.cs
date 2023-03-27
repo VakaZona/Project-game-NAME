@@ -90,13 +90,18 @@ public class TowerControl : MonoBehaviour
     }
 
     IEnumerator MoveProjectile(Projectile projectile) {
-        while (GetTargetDistance(targetEnemy)>0.20f && projectile !=null && targetEnemy !=null)
+        while (GetTargetDistance(targetEnemy)>0.20f  && targetEnemy !=null)
         {
             var dir = targetEnemy.transform.localPosition-transform.localPosition;
             var angleDirection = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            projectile.transform.rotation=Quaternion.AngleAxis(angleDirection, Vector3.forward);
+            if(projectile !=null){
+                projectile.transform.rotation=Quaternion.AngleAxis(angleDirection, Vector3.forward);
+                projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 5f*Time.deltaTime);
+            }
+            
+           
             transform.rotation = Quaternion.Euler(0, 0, angleDirection-90);
-            projectile.transform.localPosition = Vector2.MoveTowards(projectile.transform.localPosition, targetEnemy.transform.localPosition, 5f*Time.deltaTime);
+            
             yield return null;
         }
         if(projectile != null ) {
