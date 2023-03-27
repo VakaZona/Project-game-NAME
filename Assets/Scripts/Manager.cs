@@ -164,23 +164,23 @@ public class Manager : Loader<Manager> {
             SetCurrentGameState();
             ShowMenu();
         }
-        Debug.Log(RoundEscaped+TotalKilled);
+       
     }
 
     public void SetCurrentGameState() {
         if(TotalEscaped >=10) {
             currentStatus = gameStatus.gameover;
-            Debug.Log("gameover");
+            
         } else if(waveNumber==0 && (RoundEscaped+TotalKilled)==0) {
             currentStatus = gameStatus.play;
-            Debug.Log("play");
+           
         } else if (waveNumber >=totalWaves) {
             currentStatus = gameStatus.win;
-            Debug.Log("win");
+            
         } else {
             currentStatus = gameStatus.next;
             DestroyEnemies();
-            Debug.Log("next");
+            
         }
     }
 

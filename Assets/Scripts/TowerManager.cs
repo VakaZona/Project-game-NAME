@@ -27,11 +27,19 @@ public class TowerManager : Loader<TowerManager>
             Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);
 
-            if(hit.collider.tag == "TowerSide"){
+            if(hit.collider.tag == "TowerSide" && towerBtnPressed.TowerPrice<=Manager.Instance.TotalMoney){
                     buildTile=hit.collider;
                     buildTile.tag = "TowerSideFull";
                     RegisterBuildSite(buildTile);
-                    PlaceTower(hit);
+                    
+                        PlaceTower(hit);
+                    
+                        
+                    
+                    
+            } else {
+                towerBtnPressed=null;
+                        DisableDrag();
             }
            
             
@@ -66,11 +74,21 @@ public class TowerManager : Loader<TowerManager>
     public void PlaceTower(RaycastHit2D hit) {
         if(!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed!=null){
             // GameObject newTower=Instantiate(towerBtnPressed.TowerObject);
-            TowerControl newTower=Instantiate(towerBtnPressed.TowerObject);
-            newTower.transform.position = hit.transform.position;
-            BuyTower(towerBtnPressed.TowerPrice);
-            RegisterTower(newTower);
-            DisableDrag();
+             TowerControl newTower=Instantiate(towerBtnPressed.TowerObject);
+            if(towerBtnPressed.TowerPrice <= Manager.Instance.TotalMoney){
+               
+                newTower.transform.position = hit.transform.position;
+                BuyTower(towerBtnPressed.TowerPrice);
+                RegisterTower(newTower);
+                DisableDrag();
+                Debug.Log("Tower: "+ towerBtnPressed);
+            } else {
+                towerBtnPressed=null;
+                DisableDrag();
+            }
+            
+            // RegisterTower(newTower);
+            // DisableDrag();
         }
        
     }
@@ -98,5 +116,6 @@ public class TowerManager : Loader<TowerManager>
     }
     public void DisableDrag(){
         spriteRenderer.enabled=false;
+         
     }
 }
