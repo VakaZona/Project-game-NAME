@@ -2064,6 +2064,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1652664360141818699, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
+      propertyPath: playBtn
+      value: 
+      objectReference: {fileID: 1876553915}
+    - target: {fileID: 1652664360141818699, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
+      propertyPath: currentWave
+      value: 
+      objectReference: {fileID: 1145539801}
+    - target: {fileID: 1652664360141818699, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
+      propertyPath: playBtnLabel
+      value: 
+      objectReference: {fileID: 842248881}
+    - target: {fileID: 1652664360141818699, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
+      propertyPath: totalMoneyLabel
+      value: 
+      objectReference: {fileID: 394328227}
+    - target: {fileID: 1652664360141818699, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
+      propertyPath: totalEscapedLabel
+      value: 
+      objectReference: {fileID: 241859509}
     - target: {fileID: 7980887118439439865, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -20477,7 +20497,7 @@ GameObject:
   - component: {fileID: 1876553916}
   - component: {fileID: 1876553915}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: NextWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20547,7 +20567,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1876553916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1995527432}
+        m_TargetAssemblyTypeName: Manager, Assembly-CSharp
+        m_MethodName: PlayButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1876553916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23029,6 +23061,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 314778088535389343, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
   m_PrefabInstance: {fileID: 187482758}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1995527432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1652664360141818699, guid: 519186341ef89dc40ac803c5edca488e, type: 3}
+  m_PrefabInstance: {fileID: 187482758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42bf015d5a298804091e8d7de7b179af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2013058361
 GameObject:
   m_ObjectHideFlags: 0

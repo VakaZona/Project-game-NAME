@@ -25,9 +25,8 @@ public class Manager : Loader<Manager> {
     [SerializeField]
     GameObject spawnPoint;
     [SerializeField]
-    GameObject[] enemies;
-    [SerializeField]
-    int maxEnemiesOnScreen;
+    Enemy[] enemies;
+    
     [SerializeField]
     int totalEnemies=5;
     [SerializeField]
@@ -39,13 +38,19 @@ public class Manager : Loader<Manager> {
     int roundEscaped = 0;
     int totalKilled=0;
     int whichEnemiesToSpawn = 0;
+    int enemiesToSpawn = 0;
     gameStatus currentStatus = gameStatus.play;
 
     public List<Enemy> EnemyList = new List<Enemy>();
-    
+    AudioSource audioSource;
 
     const float spawnDelay=0.5f;
-
+    
+    public AudioSource AudioSource{
+        get {
+            return audioSource;
+        }
+    }
 
     public int TotalEscaped
     {
@@ -91,8 +96,8 @@ public class Manager : Loader<Manager> {
     IEnumerator Spawn() {
         if(enemiesPerSpawn> 0 && EnemyList.Count< totalEnemies) {
             for (int i = 0; i < enemiesPerSpawn; i++) {
-                if(EnemyList.Count < maxEnemiesOnScreen) {
-                    GameObject newEnemy=Instantiate(enemies[1]) as GameObject;
+                if(EnemyList.Count < totalEnemies) {
+                    Enemy newEnemy=Instantiate(enemies[Random.Range(0, enemiesToSpawn)]) as Enemy;
                     newEnemy.transform.position = spawnPoint.transform.position;
 
                 }
@@ -107,6 +112,8 @@ public class Manager : Loader<Manager> {
     void Start()
     {
         playBtn.gameObject.SetActive(false);
+        audioSource=GetComponent<AudioSource>();
+        audioSource.volume=0.3f;
         ShowMenu();
     }
 
@@ -151,7 +158,9 @@ public class Manager : Loader<Manager> {
     {
         totalEscapedLabel.text = "Пропущено " + TotalEscaped + "/10";
         if((RoundEscaped+TotalKilled)==totalEnemies) {
-            
+            if(waveNumber<=enemies.Length){
+                enemiesToSpawn=waveNumber;
+            }
             SetCurrentGameState();
             ShowMenu();
         }
@@ -184,7 +193,10 @@ public class Manager : Loader<Manager> {
             case gameStatus.play:
                 totalEnemies = 5;
                 TotalEscaped = 0;
-                TotalMoney = 30;
+                TotalMoney = 40;
+                enemiesToSpawn = 0;
+                TowerManager.Instance.DestroyAllTowers();
+                TowerManager.Instance.RenameTagBuildSite();
                 totalMoneyLabel.text = TotalMoney.ToString();
                 totalEscapedLabel.text = "Пропущено " + TotalEscaped + "/10";
                 break;

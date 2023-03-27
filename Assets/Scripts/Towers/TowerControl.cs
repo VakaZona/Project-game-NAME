@@ -70,6 +70,13 @@ public class TowerControl : MonoBehaviour
         isAttacking = false;
         Projectile newProjectile=Instantiate(projectile) as Projectile;
         newProjectile.transform.localPosition = transform.localPosition;
+        if(newProjectile.PType==projectileType.miniBullet){
+            Manager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Minigun);
+        } else if(newProjectile.PType==projectileType.bigBullet){
+            Manager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Canon);
+        } else if(newProjectile.PType==projectileType.laser){
+            Manager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Lasergun);
+        }
 
         if (targetEnemy==null){
             Destroy(newProjectile);
