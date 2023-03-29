@@ -179,7 +179,7 @@ public class Manager : Loader<Manager> {
             
         } else {
             currentStatus = gameStatus.next;
-            DestroyEnemies();
+            // DestroyEnemies();
             
         }
     }

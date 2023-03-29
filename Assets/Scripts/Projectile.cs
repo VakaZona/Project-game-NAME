@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
 
     [SerializeField]
     projectileType pType;
-
+    
     public int AttackDamage {
         get {
             return attackDamage;

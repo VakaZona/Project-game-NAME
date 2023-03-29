@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7257621613073111968}
   - component: {fileID: 236240625215953012}
   - component: {fileID: -3998000421987493360}
+  - component: {fileID: 7126019701156885129}
   m_Layer: 0
   m_Name: bigGunTower
   m_TagString: Tower
@@ -100,3 +101,23 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   attackRadius: 8
   projectile: {fileID: -4773230328920096760, guid: 6d1c2d90b3f24364bbec065817c88d5f, type: 3}
+--- !u!95 &7126019701156885129
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888736018681040659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 1b3c668d10a725f47a4b217dad84a527, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

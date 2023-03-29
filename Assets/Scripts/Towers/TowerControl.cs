@@ -13,13 +13,13 @@ public class TowerControl : MonoBehaviour
     Projectile projectile;
     Enemy targetEnemy = null;
     float attackCounter;
-
+    Animator anim;
     bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     
@@ -70,6 +70,7 @@ public class TowerControl : MonoBehaviour
         isAttacking = false;
         Projectile newProjectile=Instantiate(projectile) as Projectile;
         newProjectile.transform.localPosition = transform.localPosition;
+        anim.Play("laserAttack");
         if(newProjectile.PType==projectileType.miniBullet){
             Manager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Minigun);
         } else if(newProjectile.PType==projectileType.bigBullet){
