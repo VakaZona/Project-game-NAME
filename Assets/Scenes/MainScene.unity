@@ -2053,7 +2053,7 @@ GameObject:
   - component: {fileID: 156100759}
   m_Layer: 8
   m_Name: terrainLeftTop (3)
-  m_TagString: Ground
+  m_TagString: GroundTopLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2138,7 +2138,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.051683903, y: 0.10336745}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2149,7 +2149,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.59427357, y: 0.6976416}
   m_EdgeRadius: 0
 --- !u!1 &157217958
 GameObject:
@@ -4921,7 +4921,7 @@ GameObject:
   - component: {fileID: 314924068}
   m_Layer: 8
   m_Name: terrainLeftTop
-  m_TagString: Ground
+  m_TagString: GroundLeftTop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5006,7 +5006,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.024636209, y: -0.030795336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5017,7 +5017,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.54447687, y: 0.5321584}
   m_EdgeRadius: 0
 --- !u!1 &329512554
 GameObject:
@@ -5298,7 +5298,7 @@ GameObject:
   - component: {fileID: 340771710}
   m_Layer: 8
   m_Name: terrainLeftTop (2)
-  m_TagString: Ground
+  m_TagString: GroundLeftTop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5383,7 +5383,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.014766693, y: 0.06645048}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5394,7 +5394,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.7271757, y: 0.7419419}
   m_EdgeRadius: 0
 --- !u!1 &383007505
 GameObject:
@@ -6334,7 +6334,7 @@ GameObject:
   - component: {fileID: 433517721}
   m_Layer: 8
   m_Name: terrainLeftBottom (1)
-  m_TagString: Ground
+  m_TagString: GroundLeftDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6419,7 +6419,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.08121711, y: 0.02214992}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6430,7 +6430,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.68287456, y: 0.65334153}
   m_EdgeRadius: 0
 --- !u!1 &443286204
 GameObject:
@@ -8503,7 +8503,7 @@ GameObject:
   - component: {fileID: 581882335}
   m_Layer: 8
   m_Name: terrainLeftBottom
-  m_TagString: Ground
+  m_TagString: GroundLeftDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8588,7 +8588,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.018477201, y: -0.012318194}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8599,7 +8599,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.7292485, y: 0.6676582}
   m_EdgeRadius: 0
 --- !u!1 &589014490
 GameObject:
@@ -14236,7 +14236,7 @@ GameObject:
   - component: {fileID: 994150207}
   m_Layer: 8
   m_Name: terrainRightBottom (1)
-  m_TagString: Ground
+  m_TagString: GroundRightDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14321,7 +14321,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.029533505, y: -0.0147667825}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14332,7 +14332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.727175, y: 0.69764155}
   m_EdgeRadius: 0
 --- !u!1 &1009081363
 GameObject:
@@ -16697,7 +16697,7 @@ GameObject:
   - component: {fileID: 1140956174}
   m_Layer: 8
   m_Name: terrainRightBottom (2)
-  m_TagString: Ground
+  m_TagString: GroundDownRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16782,7 +16782,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0073833466, y: 0.029533505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16793,7 +16793,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.6828747, y: 0.6976416}
   m_EdgeRadius: 0
 --- !u!1 &1141231760
 GameObject:
@@ -17629,7 +17629,7 @@ GameObject:
   - component: {fileID: 1217597868}
   m_Layer: 8
   m_Name: terrainRightBottom (3)
-  m_TagString: Ground
+  m_TagString: GroundRightDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17714,7 +17714,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.014766693, y: 0.03691697}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17725,7 +17725,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.6385746, y: 0.71240807}
   m_EdgeRadius: 0
 --- !u!1 &1223146849
 GameObject:
@@ -18517,7 +18517,7 @@ GameObject:
   - component: {fileID: 1257613157}
   m_Layer: 8
   m_Name: terrainRightTop
-  m_TagString: Ground
+  m_TagString: GroundTopRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18602,7 +18602,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.024636269, y: -0.0123182535}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18613,7 +18613,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.6922941, y: 0.7169306}
   m_EdgeRadius: 0
 --- !u!1 &1273551148
 GameObject:
@@ -25990,7 +25990,7 @@ GameObject:
   - component: {fileID: 1870771813}
   m_Layer: 8
   m_Name: terrainRightBottom
-  m_TagString: Ground
+  m_TagString: GroundDownRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26075,7 +26075,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.022150159, y: -0.029533625}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26086,7 +26086,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.6828749, y: 0.6976414}
   m_EdgeRadius: 0
 --- !u!1 &1876553913
 GameObject:
@@ -26867,7 +26867,7 @@ GameObject:
   - component: {fileID: 1902582266}
   m_Layer: 8
   m_Name: terrainLeftBottom (2)
-  m_TagString: Ground
+  m_TagString: GroundLeftDown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26952,7 +26952,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.036917686, y: 0.0073834658}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26963,7 +26963,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.71240807, y: 0.7124083}
   m_EdgeRadius: 0
 --- !u!1 &1910588928
 GameObject:
@@ -27089,7 +27089,7 @@ GameObject:
   - component: {fileID: 1914736689}
   m_Layer: 8
   m_Name: terrainRightTop (1)
-  m_TagString: Ground
+  m_TagString: GroundTopRight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27174,7 +27174,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.06645036, y: 0.051683724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -27185,7 +27185,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.6533413, y: 0.7124082}
   m_EdgeRadius: 0
 --- !u!1 &1919536713
 GameObject:
@@ -27284,7 +27284,7 @@ GameObject:
   - component: {fileID: 1936237982}
   m_Layer: 8
   m_Name: terrainLeftTop (1)
-  m_TagString: Ground
+  m_TagString: GroundTopLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27369,7 +27369,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000011920929, y: 0.022150218}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -27380,7 +27380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1111112, y: 1.1111112}
+  m_Size: {x: 0.66810775, y: 0.6238078}
   m_EdgeRadius: 0
 --- !u!1 &1940665796
 GameObject:

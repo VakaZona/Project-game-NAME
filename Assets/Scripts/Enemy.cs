@@ -73,6 +73,14 @@ public class Enemy : MonoBehaviour
             }
             Destroy(collision.gameObject);
             
+        } else if (collision.tag=="GroundLeftDown" || collision.tag=="GroundRightDown") {
+            anim.Play("bullRunDown");
+        } else if (collision.tag=="GroundLeftTop" || collision.tag=="GroundRightTop") {
+            anim.Play("bullRunTop");
+        } else if (collision.tag=="GroundTopRight" || collision.tag=="GroundDownRight") {
+            anim.Play("bullRun");
+        } else if (collision.tag=="GroundTopLeft" || collision.tag=="GroundDownLeft") {
+            anim.Play("bullRunLeft");
         }
     }
     public void EnemyHit(int hitPoints) {

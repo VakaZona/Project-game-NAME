@@ -10,6 +10,13 @@ TagManager:
   - Ground
   - Tower
   - TowerSideFull
+  - Projectile
+  - GroundLeftDown
+  - GroundTopRight
+  - GroundLeftTop
+  - GroundDownRight
+  - GroundTopLeft
+  - GroundRightDown
   layers:
   - Default
   - TransparentFX
