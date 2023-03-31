@@ -7,5 +7,9 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: canonTower
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: e791f03672655e644aa1fc57d5c29a92, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d432553ca7b5b5d4bb6b6feeb2bae9f7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bae2bc1e13d596843a1b766b6023c996, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 754c1d37e0a9d1e4b93a24b5c1899843, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 73e0b5b493a14c7478bf4d35eda47dbc, type: 2}

@@ -17,6 +17,9 @@ TagManager:
   - GroundDownRight
   - GroundTopLeft
   - GroundRightDown
+  - FinishHelicopter
+  - Helicopter
+  - RespawnHelicopter
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,15 @@ public class MenuManager : MonoBehaviour
     public void PlayGame(){
         SceneManager.LoadScene("MainScene");
     }
+    public void PlayLevelOne(){
+        SceneManager.LoadScene("Level1");
+    }
+    public void PlayLevelTwo(){
+        SceneManager.LoadScene("Level2");
+    }
+    public void BackMenu(){
+        SceneManager.LoadScene("Menu");
+    }
     public void ExitGame(){
         Application.Quit();
     }

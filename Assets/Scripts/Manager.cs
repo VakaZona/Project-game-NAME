@@ -26,12 +26,17 @@ public class Manager : Loader<Manager> {
     GameObject spawnPoint;
     [SerializeField]
     Enemy[] enemies;
+
     
     [SerializeField]
     int totalEnemies=5;
     [SerializeField]
     int enemiesPerSpawn;
+    // [SerializeField]
+    // GameObject spawnPointHelicopter;
 
+    // [SerializeField]
+    // HelicopterControler helicopter;
     int waveNumber=0;
     int totalMoney=30;
     int totalEscaped=0;
@@ -107,6 +112,7 @@ public class Manager : Loader<Manager> {
             StartCoroutine(Spawn());
         }
     }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +120,8 @@ public class Manager : Loader<Manager> {
         playBtn.gameObject.SetActive(false);
         audioSource=GetComponent<AudioSource>();
         audioSource.volume=0.3f;
+        // HelicopterControler newHelicopter=Instantiate(helicopter) as HelicopterControler;
+        // newHelicopter.transform.position = spawnPointHelicopter.transform.position;
         ShowMenu();
     }
 
