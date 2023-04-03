@@ -15,6 +15,15 @@ public class MenuManager : MonoBehaviour
     public void PlayLevelTwo(){
         SceneManager.LoadScene("Level2");
     }
+    public void PlayLevelThree(){
+        SceneManager.LoadScene("Level3");
+    }
+    public void PlayLevelFour(){
+        SceneManager.LoadScene("Level4");
+    }
+     public void PlayLevelFive(){
+        SceneManager.LoadScene("Level5");
+    }
     public void BackMenu(){
         SceneManager.LoadScene("Menu");
     }

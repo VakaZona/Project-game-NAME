@@ -14868,12 +14868,12 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 2
+  m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 50, y: 40}
-  m_Spacing: {x: -20, y: 0}
-  m_Constraint: 1
+  m_Spacing: {x: -20, y: 10}
+  m_Constraint: 0
   m_ConstraintCount: 3
 --- !u!222 &954809253
 CanvasRenderer:
@@ -28570,7 +28570,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1848574134
 GameObject:
@@ -33565,7 +33565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8413995949162379535, guid: c1d2c487459937140870816ecc60365b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8413995949162379535, guid: c1d2c487459937140870816ecc60365b, type: 3}
       propertyPath: m_LocalPosition.x

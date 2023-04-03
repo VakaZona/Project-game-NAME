@@ -32,18 +32,21 @@ public class TowerManager : Loader<TowerManager>
                     buildTile.tag = "TowerSideFull";
                     RegisterBuildSite(buildTile);
                     
-                        PlaceTower(hit);
+                    PlaceTower(hit);
                     
                         
                     
                     
-            } else {
+            } 
+            else {
                 towerBtnPressed=null;
                         DisableDrag();
             }
+            
            
             
         }   
+        
         if(spriteRenderer.enabled) {
                 FollowMouse();
         } 
@@ -71,6 +74,7 @@ public class TowerManager : Loader<TowerManager>
         TowerList.Clear();
     }
 
+
     public void PlaceTower(RaycastHit2D hit) {
         if(!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed!=null){
             // GameObject newTower=Instantiate(towerBtnPressed.TowerObject);
@@ -81,9 +85,6 @@ public class TowerManager : Loader<TowerManager>
                 BuyTower(towerBtnPressed.TowerPrice);
                 RegisterTower(newTower);
                 DisableDrag();
-                
-            
-            
             // RegisterTower(newTower);
             // DisableDrag();
         }
@@ -99,9 +100,8 @@ public class TowerManager : Loader<TowerManager>
             towerBtnPressed = towerSelected;
             EnableDrag(towerBtnPressed.DragSprite);
         }
-        
-        
     }
+    
 
     public void FollowMouse() {
         transform.position=Camera.main.ScreenToWorldPoint(Input.mousePosition);

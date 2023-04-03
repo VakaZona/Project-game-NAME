@@ -11,7 +11,7 @@ public enum gameStatus {
 public class Manager : Loader<Manager> {
     
     [SerializeField]
-    int totalWaves=10;
+    int totalWaves;
     [SerializeField]
     Text totalMoneyLabel;
     [SerializeField]
@@ -29,7 +29,7 @@ public class Manager : Loader<Manager> {
 
     
     [SerializeField]
-    int totalEnemies=5;
+    int totalEnemies;
     [SerializeField]
     int enemiesPerSpawn;
     // [SerializeField]
@@ -199,7 +199,7 @@ public class Manager : Loader<Manager> {
                 totalEnemies+=(waveNumber);
                 break;
             case gameStatus.play:
-                totalEnemies = 5;
+                
                 TotalEscaped = 0;
                 TotalMoney = 40;
                 enemiesToSpawn = 0;
