@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     Transform enemy;
     float navigationTime=0;
     Animator anim;
-
+    int complexity;
     public bool IsDead {
         get {
             return isDead;
@@ -38,6 +38,17 @@ public class Enemy : MonoBehaviour
         enemyCollider = GetComponent<Collider2D>();
         Manager.Instance.RegisterEnemy(this);
         anim = GetComponent<Animator>();
+        complexity=PlayerPrefs.GetInt("Complexity");
+        if(complexity==null){
+            complexity=1;
+        }
+        if(complexity==2){
+            health+=10;
+        }
+        if(complexity==3){
+            health+=20;
+        }
+        Debug.Log(health);
     }
 
     // Update is called once per frame

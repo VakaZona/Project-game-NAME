@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public enum gameStatus {
@@ -44,6 +45,8 @@ public class Manager : Loader<Manager> {
     int totalKilled=0;
     int whichEnemiesToSpawn = 0;
     int enemiesToSpawn = 0;
+    string sceneName;
+    int sceneIndex;
     gameStatus currentStatus = gameStatus.play;
 
     public List<Enemy> EnemyList = new List<Enemy>();
@@ -117,6 +120,8 @@ public class Manager : Loader<Manager> {
     // Start is called before the first frame update
     void Start()
     {
+        sceneName = SceneManager.GetActiveScene().name;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
         playBtn.gameObject.SetActive(false);
         audioSource=GetComponent<AudioSource>();
         audioSource.volume=0.3f;
@@ -135,6 +140,7 @@ public class Manager : Loader<Manager> {
 
    public void RegisterEnemy(Enemy enemy) {
         EnemyList.Add(enemy);
+        
    }
 
    public void UnregisterEnemy(Enemy enemy) {
@@ -208,6 +214,14 @@ public class Manager : Loader<Manager> {
                 totalMoneyLabel.text = TotalMoney.ToString();
                 totalEscapedLabel.text = "Пропущено " + TotalEscaped + "/10";
                 break;
+            case gameStatus.win:
+                if(sceneName=="Level5"){
+                    Invoke("LoadMainMenu", 1f);
+                } else {
+                    PlayerPrefs.SetInt("LevelComplete", sceneIndex);
+                    Invoke("NextLevel", 1f);
+                }
+                break;
             // default:
             //     totalEnemies = 5;
             //     TotalEscaped = 0;
@@ -224,7 +238,12 @@ public class Manager : Loader<Manager> {
         playBtn.gameObject.SetActive(false);
     }
 
-
+    void NextLevel(){
+        SceneManager.LoadScene(sceneIndex+1);
+    } 
+    void LoadMainMenu(){
+        SceneManager.LoadScene("Menu");
+    }
    public void ShowMenu()
    {
         switch(currentStatus){
